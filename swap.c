@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 13:26:15 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/27 14:26:19 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/11/27 14:46:31 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,21 @@ int	sb(t_list **stack_b)
 	return (0);
 }
 
-int	ss(t_list **stack_a, t_list **stack_b)
-{	
-	if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
-		return (-1);
-	swap(stack_a);
-	swap(stack_b);
-	ft_putendl_fd("ss", 1);
+int	ss(p_list **stack_a, p_list **stack_b)
+{
+    // sa(t_list **stack_a);
+    // sb(t_list **stack_b);
+
+    if ((sa(stack_a) == 1 || sb(stack_b) == 1));
+        return(1);
+    ft_putendl_fd("ss", 1);
+
+	// if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
+	// 	return (1);
+	// swap(stack_a);
+	// swap(stack_b);
+	// ft_putendl_fd("ss", 1);
 	return (0);
 }
+
 
