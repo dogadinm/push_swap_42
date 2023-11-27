@@ -6,13 +6,13 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:22:35 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/27 11:30:55 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/11/27 12:24:31 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	ft_contains(int num, char **argv, int i)
+static int	ft_duplicate(int num, char **argv, int i)
 {
 	i++;
 	while (argv[i])
@@ -59,7 +59,7 @@ void	arg_check(int argc , char **argv)
 		tmp = ft_atoi(args[i]);
 		if (!ft_isnum(args[i]))
 			ft_error("Error");
-		if (ft_contains(tmp, args, i))
+		if (ft_duplicate(tmp, args, i))
 			ft_error("Error");
 		if (tmp < -2147483648 || tmp > 2147483647)
 			ft_error("Error");
