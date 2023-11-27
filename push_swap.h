@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 11:17:20 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/27 11:43:12 by mdogadin         ###   ########.fr       */
+/*   Created: 2023/11/27 11:06:11 by mdogadin          #+#    #+#             */
+/*   Updated: 2023/11/27 11:48:21 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int main(int argc, char **argv)
+# include "../libft/libft.h"
+// Stack
+typedef struct n_list
 {
-    p_list **stack_a;
-    p_list **stack_b;
+	int				value;
+	int				index;
+	struct s_list	*next;
+}	p_list;
 
-    if (argc < 2)
-        return(1);
-    arg_check(argc, argv);
-    stack_a = (p_list **)malloc(sizeof(p_list));
-	stack_b = (p_list **)malloc(sizeof(p_list));
-}
+
+void arg_check(int argc , char **argv);
+void	ft_error(char *msg);
+void	ft_free(char **str);
+#endif
