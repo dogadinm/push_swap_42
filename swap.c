@@ -6,7 +6,7 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 13:26:15 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/27 14:46:31 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/11/28 13:18:13 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int swap(p_list **stack)
 	int		tmp_val;
 	int		tmp_index;
 
-	if (ft_lstsize(*stack) < 2)
+	if (ft_listsize(*stack) < 2)
 		return (1);
     head = *stack;
 	next = head->next;

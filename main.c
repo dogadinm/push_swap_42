@@ -6,7 +6,7 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:17:20 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 12:12:04 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/11/28 13:18:11 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ static void	create_stack(p_list **stack, int argc, char **argv)
 	}
 	while (args[i])
 	{
-		new = ft_lstnew(ft_atoi(args[i]));
-		ft_lstadd_back(stack, new);
+		new = ft_listnew(ft_atoi(args[i]));
+		ft_listadd_back(stack, new);
 		i++;
 	}
 	index_stack(stack);
@@ -39,7 +39,7 @@ static void	create_stack(p_list **stack, int argc, char **argv)
 
 static void	sort_stack(p_list **stack_a, p_list **stack_b)
 {
-	if (ft_lstsize(*stack_a) <= 5)
+	if (ft_listsize(*stack_a) <= 5)
 		simple_sort(stack_a, stack_b);
 	else
 		radix_sort(stack_a, stack_b);
