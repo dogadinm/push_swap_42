@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   reverseRotate.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 10:17:03 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 11:26:55 by mdogadin         ###   ########.fr       */
+/*   Created: 2023/11/28 11:05:06 by mdogadin          #+#    #+#             */
+/*   Updated: 2023/11/28 11:39:48 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	rotate(p_list **stack)
+int	reverseRotate(p_list **stack)
 {
 	p_list	*head;
 	p_list	*tail;
@@ -21,33 +21,40 @@ int	rotate(p_list **stack)
 		return (1);
 	head = *stack;
 	tail = ft_lstlast(head);
-	*stack = head->next;
-	head->next = NULL;
-	tail->next = head;
-	return (0); 
-}
-
-int	ra(p_list **stack_a)
-{
-	if (rotate(stack_a) == 1)
-		return (1);
-	ft_putendl_fd("ra", 1);
+	while (head)
+	{
+		if (head->next->next == NULL)
+		{
+			 head->next = NULL;
+			 break ;
+		}
+		head = head->next;
+	}
+	tail->next = *stack;
+	*stack = tail;
 	return (0);
 }
 
-int	rb(p_list **stack_b)
+int	rra(p_list **stack_a)
 {
-	if (rotate(stack_b) == 1)
-		return (1);
-	ft_putendl_fd("rb", 1);
+	if (reverseRotate(stack_a) == 1)
+		return (-1);
+	ft_putendl_fd("rra", 1);
 	return (0);
 }
 
-int	rr(p_list **stack_a, p_list **stack_b)
+int	rrb(p_list **stack_b)
 {
+	if (reverseRotate(stack_b) == 1)
+		return (1);
+	ft_putendl_fd("rrb", 1);
+	return (0);
+}
 
-    if ((ra(stack_a) == 1 || rb(stack_b) == 1));
+int	rrr(p_list **stack_a, p_list **stack_b)
+{
+    if ((rra(stack_a) == 1 || rrb(stack_b) == 1));
         return(1);
-    ft_putendl_fd("rr", 1);
+	ft_putendl_fd("rrr", 1);
 	return (0);
 }
