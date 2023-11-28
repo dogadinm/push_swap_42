@@ -6,7 +6,7 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:46:38 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/27 14:52:37 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/11/28 13:18:48 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	push(p_list **stack_to, p_list **stack_from)
 	t_list	*head_to;
 	t_list	*head_from;
 
-	if (ft_lstsize(*stack_from) == 0)
+	if (ft_listsize(*stack_from) == 0)
 		return (1);
 	head_to = *stack_to;
 	head_from = *stack_from;

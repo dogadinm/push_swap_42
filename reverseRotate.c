@@ -6,7 +6,7 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 11:05:06 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 11:39:48 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/11/28 13:18:46 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	reverseRotate(p_list **stack)
 	p_list	*head;
 	p_list	*tail;
 
-	if (ft_lstsize(*stack) < 2)
+	if (ft_listsize(*stack) < 2)
 		return (1);
 	head = *stack;
-	tail = ft_lstlast(head);
+	tail = ft_listlast(head);
 	while (head)
 	{
 		if (head->next->next == NULL)
