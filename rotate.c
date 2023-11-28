@@ -6,7 +6,7 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 10:17:03 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 13:18:17 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/11/28 13:57:08 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	rotate(p_list **stack)
 	p_list	*head;
 	p_list	*tail;
 
-	if (ft_lstsize(*stack) < 2)
+	if (ft_listsize(*stack) < 2)
 		return (1);
 	head = *stack;
 	tail = ft_listlast(head);
@@ -46,7 +46,7 @@ int	rb(p_list **stack_b)
 int	rr(p_list **stack_a, p_list **stack_b)
 {
 
-    if ((ra(stack_a) == 1 || rb(stack_b) == 1));
+    if ((ra(stack_a) == 1 || rb(stack_b) == 1))
         return(1);
     ft_putendl_fd("rr", 1);
 	return (0);

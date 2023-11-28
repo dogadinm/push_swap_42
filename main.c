@@ -6,7 +6,7 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:17:20 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 13:18:11 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/11/28 14:09:06 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,16 @@ int main(int argc, char **argv)
     *stack_a = NULL;
 	*stack_b = NULL;
     create_stack(stack_a, argc, argv);
+	if (is_sorted(stack_a))
+	{
+		free_stack(stack_a);
+		free_stack(stack_b);
+		return (0);
+	}
+	sort_stack(stack_a, stack_b);
+	free_stack(stack_a);
+	free_stack(stack_b);
+	return (0);
+
 
 }

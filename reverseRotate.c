@@ -6,7 +6,7 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 11:05:06 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 13:18:46 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/11/28 13:56:32 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,10 @@ int	rrb(p_list **stack_b)
 
 int	rrr(p_list **stack_a, p_list **stack_b)
 {
-    if ((rra(stack_a) == 1 || rrb(stack_b) == 1));
+    if ((rra(stack_a) == 1 || rrb(stack_b) == 1))
+    {
         return(1);
+    }
 	ft_putendl_fd("rrr", 1);
 	return (0);
 }

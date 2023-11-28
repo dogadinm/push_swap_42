@@ -6,7 +6,7 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 13:26:15 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 13:18:13 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/11/28 13:54:15 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int swap(p_list **stack)
 	return (0);
 }
 
-int	sa(t_list **stack_a)
+int	sa(p_list **stack_a)
 {
 	if (swap(stack_a) == 1)
 		return (1);
@@ -42,7 +42,7 @@ int	sa(t_list **stack_a)
 	return (0);
 }
 
-int	sb(t_list **stack_b)
+int	sb(p_list **stack_b)
 {
 	if (swap(stack_b) == 1)
 		return (1);
@@ -52,10 +52,10 @@ int	sb(t_list **stack_b)
 
 int	ss(p_list **stack_a, p_list **stack_b)
 {
-    // sa(t_list **stack_a);
-    // sb(t_list **stack_b);
+    // sa(p_list **stack_a);
+    // sb(p_list **stack_b);
 
-    if ((sa(stack_a) == 1 || sb(stack_b) == 1));
+    if ((sa(stack_a) == 1 || sb(stack_b) == 1))
         return(1);
     ft_putendl_fd("ss", 1);
 
