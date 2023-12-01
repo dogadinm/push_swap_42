@@ -69,8 +69,8 @@ int main(int argc, char **argv)
     *stack_a = NULL;
 	*stack_b = NULL;
 	create_stack(stack_a, argc, argv);
-	print_stack(stack_a);
-    print_stack(stack_b);
+	// print_stack(stack_a);
+    // print_stack(stack_b);
 	if (is_sorted(stack_a))
 	{
 		free_stack(stack_a);
@@ -78,8 +78,8 @@ int main(int argc, char **argv)
 		return (0);
 	}
 	sort_stack(stack_a, stack_b);
-	print_stack(stack_a);
-    print_stack(stack_b);
+	// print_stack(stack_a);
+    // print_stack(stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
 	return (0);
