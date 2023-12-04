@@ -41,7 +41,7 @@ int	push(p_list **stack_to, p_list **stack_from)
 
 int	pa(p_list **stack_a, p_list **stack_b)
 {
-	if (push(stack_a, stack_b) == -1)
+	if (push(stack_a, stack_b) == 1)
 		return (1);
 	ft_putendl_fd("pa", 1);
 	return (0);
