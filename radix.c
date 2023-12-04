@@ -86,7 +86,7 @@
 //     }
 // }
 
-void radix_sort(p_list** stack_a, p_list** stack_b) {
+void sort(p_list** stack_a, p_list** stack_b) {
     while (*stack_a) {
         // Найти минимальный элемент в stack_a
         int min_value = 2147483647;
@@ -100,7 +100,6 @@ void radix_sort(p_list** stack_a, p_list** stack_b) {
             }
             current = current->next;
         }
-
         // Перенести минимальный элемент в stack_b
         while (*stack_a != min_element) {
             ra(stack_a);
@@ -111,12 +110,12 @@ void radix_sort(p_list** stack_a, p_list** stack_b) {
     // Восстановление порядка в stack_a
     while (*stack_b) {
         // Найти максимальный элемент в stack_b
-        int max_value = -2147483647;
+        int max_value = -2147483648;
         p_list* max_element = NULL;
         p_list* current = *stack_b;
 
         while (current) {
-            if (current->value > max_value) {
+            if (current->value >= max_value) {
                 max_value = current->value;
                 max_element = current;
             }

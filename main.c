@@ -43,7 +43,7 @@ static void	sort_stack(p_list **stack_a, p_list **stack_b)
 	if (ft_listsize(*stack_a) <= 5)
 		simple_sort(stack_a, stack_b);
 	else
-		radix_sort(stack_a, stack_b);
+		sort(stack_a, stack_b);
 }
 
 void print_stack(p_list **stack) {

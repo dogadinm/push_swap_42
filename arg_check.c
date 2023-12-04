@@ -11,13 +11,37 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
+long	ft_atoi2(const char *str)
+{
+	long	i;
+	int	neg;
+	long	res;
+
+	i = 0;
+	neg = 1;
+	res = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			neg *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = (str[i] - '0') + (res * 10);
+		i++;
+	}
+	return (res * neg);
+}
 
 static int	ft_duplicate(int num, char **argv, int i)
 {
 	i++;
 	while (argv[i])
 	{
-		if (ft_atoi(argv[i]) == num)
+		if (ft_atoi2(argv[i]) == num)
 			return (1);
 		i++;
 	}
@@ -56,7 +80,7 @@ void	arg_check(int argc , char **argv)
 	}
 	while (args[i])
 	{
-		tmp = ft_atoi(args[i]);
+		tmp = ft_atoi2(args[i]);
 		if (!ft_isnum(args[i]))
 			ft_error("Error");
 		if (ft_duplicate(tmp, args, i))

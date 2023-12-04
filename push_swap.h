@@ -47,7 +47,7 @@ void	free_stack(p_list **stack);
 void	ft_free(char **str);
 
 // Algorithm utils
-void	radix_sort(p_list **stack_a, p_list **stack_b);
+void	sort(p_list **stack_a, p_list **stack_b);
 void	simple_sort(p_list **stack_a, p_list **stack_b);
 void	sort_5(p_list **stack_a, p_list **stack_b);
 
