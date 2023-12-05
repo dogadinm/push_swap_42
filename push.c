@@ -6,17 +6,17 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:46:38 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 13:53:06 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/12/05 15:27:21 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	push(p_list **stack_to, p_list **stack_from)
+int	push(t_list **stack_to, t_list **stack_from)
 {
-	p_list	*tmp;
-	p_list	*head_to;
-	p_list	*head_from;
+	t_list	*tmp;
+	t_list	*head_to;
+	t_list	*head_from;
 
 	if (ft_listsize(*stack_from) == 0)
 		return (1);
@@ -39,7 +39,7 @@ int	push(p_list **stack_to, p_list **stack_from)
 	return (0);
 }
 
-int	pa(p_list **stack_a, p_list **stack_b)
+int	pa(t_list **stack_a, t_list **stack_b)
 {
 	if (push(stack_a, stack_b) == 1)
 		return (1);
@@ -47,7 +47,7 @@ int	pa(p_list **stack_a, p_list **stack_b)
 	return (0);
 }
 
-int	pb(p_list **stack_a, p_list **stack_b)
+int	pb(t_list **stack_a, t_list **stack_b)
 {
 	if (push(stack_b, stack_a) == 1)
 		return (1);

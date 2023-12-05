@@ -6,16 +6,17 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:22:35 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/27 12:24:31 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/12/05 15:20:51 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 long	ft_atoi2(const char *str)
 {
 	long	i;
-	int	neg;
 	long	res;
+	int		neg;
 
 	i = 0;
 	neg = 1;
@@ -64,9 +65,9 @@ static int	ft_isnum(char *num)
 	return (1);
 }
 
-void	arg_check(int argc , char **argv)
+void	arg_check(int argc, char **argv)
 {
-    int		i;
+	int		i;
 	long	tmp;
 	char	**args;
 

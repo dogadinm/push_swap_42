@@ -6,16 +6,16 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:43:15 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 12:43:38 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/12/05 15:30:53 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static p_list	*get_next_min(p_list **stack)
+static t_list	*get_next_min(t_list **stack)
 {
-	p_list	*head;
-	p_list	*min;
+	t_list	*head;
+	t_list	*min;
 	int		has_min;
 
 	min = NULL;
@@ -36,9 +36,9 @@ static p_list	*get_next_min(p_list **stack)
 	return (min);
 }
 
-void	index_stack(p_list **stack)
+void	index_stack(t_list **stack)
 {
-	p_list	*head;
+	t_list	*head;
 	int		index;
 
 	index = 0;

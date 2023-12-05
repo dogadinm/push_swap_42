@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverseRotate.c                                    :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 11:05:06 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 13:56:32 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/12/05 15:20:39 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	reverseRotate(p_list **stack)
+int	reverse_rotate(t_list **stack)
 {
-	p_list	*head;
-	p_list	*tail;
+	t_list	*head;
+	t_list	*tail;
 
 	if (ft_listsize(*stack) < 2)
 		return (1);
@@ -25,8 +25,8 @@ int	reverseRotate(p_list **stack)
 	{
 		if (head->next->next == NULL)
 		{
-			 head->next = NULL;
-			 break ;
+			head->next = NULL;
+			break ;
 		}
 		head = head->next;
 	}
@@ -35,28 +35,28 @@ int	reverseRotate(p_list **stack)
 	return (0);
 }
 
-int	rra(p_list **stack_a)
+int	rra(t_list **stack_a)
 {
-	if (reverseRotate(stack_a) == 1)
-		return (-1);
+	if (reverse_rotate(stack_a) == 1)
+		return (1);
 	ft_putendl_fd("rra", 1);
 	return (0);
 }
 
-int	rrb(p_list **stack_b)
+int	rrb(t_list **stack_b)
 {
-	if (reverseRotate(stack_b) == 1)
+	if (reverse_rotate(stack_b) == 1)
 		return (1);
 	ft_putendl_fd("rrb", 1);
 	return (0);
 }
 
-int	rrr(p_list **stack_a, p_list **stack_b)
+int	rrr(t_list **stack_a, t_list **stack_b)
 {
-    if ((rra(stack_a) == 1 || rrb(stack_b) == 1))
-    {
-        return(1);
-    }
+	if ((rra(stack_a) == 1 || rrb(stack_b) == 1))
+	{
+		return (1);
+	}
 	ft_putendl_fd("rrr", 1);
 	return (0);
 }

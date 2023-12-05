@@ -6,15 +6,15 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 13:23:28 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 13:25:11 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/12/05 15:24:39 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	get_min(p_list **stack, int val)
+static int	get_min(t_list **stack, int val)
 {
-	p_list	*head;
+	t_list	*head;
 	int		min;
 
 	head = *stack;
@@ -28,9 +28,9 @@ static int	get_min(p_list **stack, int val)
 	return (min);
 }
 
-static void	sort_3(p_list **stack_a)
+static void	sort_3(t_list **stack_a)
 {
-	p_list	*head;
+	t_list	*head;
 	int		min;
 	int		next_min;
 
@@ -64,7 +64,7 @@ static void	sort_3(p_list **stack_a)
 	}
 }
 
-static void	sort_4(p_list **stack_a, p_list **stack_b)
+static void	sort_4(t_list **stack_a, t_list **stack_b)
 {
 	int	distance;
 
@@ -87,7 +87,7 @@ static void	sort_4(p_list **stack_a, p_list **stack_b)
 	pa(stack_a, stack_b);
 }
 
-void	sort_5(p_list **stack_a, p_list **stack_b)
+void	sort_5(t_list **stack_a, t_list **stack_b)
 {
 	int	distance;
 
@@ -113,7 +113,7 @@ void	sort_5(p_list **stack_a, p_list **stack_b)
 	pa(stack_a, stack_b);
 }
 
-void	simple_sort(p_list **stack_a, p_list **stack_b)
+void	simple_sort(t_list **stack_a, t_list **stack_b)
 {
 	int	size;
 

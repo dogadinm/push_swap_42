@@ -6,16 +6,16 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 10:17:03 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/11/28 13:57:08 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/12/05 15:21:01 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	rotate(p_list **stack)
+int	rotate(t_list **stack)
 {
-	p_list	*head;
-	p_list	*tail;
+	t_list	*head;
+	t_list	*tail;
 
 	if (ft_listsize(*stack) < 2)
 		return (1);
@@ -24,10 +24,10 @@ int	rotate(p_list **stack)
 	*stack = head->next;
 	head->next = NULL;
 	tail->next = head;
-	return (0); 
+	return (0);
 }
 
-int	ra(p_list **stack_a)
+int	ra(t_list **stack_a)
 {
 	if (rotate(stack_a) == 1)
 		return (1);
@@ -35,7 +35,7 @@ int	ra(p_list **stack_a)
 	return (0);
 }
 
-int	rb(p_list **stack_b)
+int	rb(t_list **stack_b)
 {
 	if (rotate(stack_b) == 1)
 		return (1);
@@ -43,11 +43,10 @@ int	rb(p_list **stack_b)
 	return (0);
 }
 
-int	rr(p_list **stack_a, p_list **stack_b)
+int	rr(t_list **stack_a, t_list **stack_b)
 {
-
-    if ((ra(stack_a) == 1 || rb(stack_b) == 1))
-        return(1);
-    ft_putendl_fd("rr", 1);
+	if ((ra(stack_a) == 1 || rb(stack_b) == 1))
+		return (1);
+	ft_putendl_fd("rr", 1);
 	return (0);
 }
