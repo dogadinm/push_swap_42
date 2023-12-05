@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+#include <stdio.h>
 static void	create_stack(t_list **stack, int argc, char **argv)
 {
 	t_list	*new;
@@ -44,7 +44,7 @@ static void	sort_stack(t_list **stack_a, t_list **stack_b)
 	else
 		sort(stack_a, stack_b);
 }
-/*
+
 void print_stack(t_list **stack) {
 	t_list *current = *stack;
 	printf("Stack: ");
@@ -54,7 +54,7 @@ void print_stack(t_list **stack) {
 	}
 	printf("\n");
 }
-*/
+
 
 int	main(int argc, char **argv)
 {
@@ -80,8 +80,8 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	sort_stack(stack_a, stack_b);
-	// print_stack(stack_a);
-	// print_stack(stack_b);
+	print_stack(stack_a);
+	print_stack(stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
 	return (0);

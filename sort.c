@@ -88,52 +88,119 @@
 // }
 */
 
+	// t_list	*max_element;
+	// t_list	*current;
+	// int		max_value;
+
+		// max_value = 0;
+		// max_element = NULL;
+		// current = *stack_b;
+		// while (current)
+		// {
+		// 	if (current->index >= max_value)
+		// 	{
+		// 		max_value = current->index;
+		// 		max_element = current;
+		// 	}
+		// 	current = current->next;
+		// }
+		// while (*stack_b != max_element)
+		// 	rra(stack_b);
+
 void	sort(t_list	**stack_a, t_list	**stack_b)
 {
 	t_list	*head_a;
-	t_list	*max_element;
-	t_list	*current;
 	t_list	*min_element;
-	int		max_value;
 	int		min_value;
 	int		size;
 
-	head_a = *stack_a;
-	size = ft_listsize(head_a);
+	size = ft_listsize(*stack_a);
 	while (*stack_a)
 	{
 		min_value = size;
 		min_element = NULL;
-		current = *stack_a;
-		while (current)
+		head_a = *stack_a;
+		while (head_a)
 		{
-			if (current->index <= min_value)
+			if (head_a->index <= min_value)
 			{
-				min_value = current->index;
-				min_element = current;
+				min_value = head_a->index;
+				min_element = head_a;
 			}
-			current = current->next;
+			head_a = head_a->next;
 		}
 		while (*stack_a != min_element)
 			ra(stack_a);
 		pb(stack_a, stack_b);
 	}
 	while (*stack_b)
-	{
-		max_value = 0;
-		max_element = NULL;
-		current = *stack_b;
-		while (current)
-		{
-			if (current->index >= max_value)
-			{
-				max_value = current->index;
-				max_element = current;
-			}
-			current = current->next;
-		}
-		while (*stack_b != max_element)
-			rra(stack_b);
 		pa(stack_a, stack_b);
-	}
 }
+
+
+// t_list	*find_min_element(t_list *stack_a, int size)
+// {
+// 	t_list	*current = stack_a;
+// 	t_list	*min_element = NULL;
+// 	int		min_value;
+
+// 	min_value = size;
+// 	while (current)
+// 	{
+// 		if (current->index <= min_value)
+// 		{
+// 			min_value = current->index;
+// 			min_element = current;
+// 		}
+// 		current = current->next;
+// 	}
+
+// 	return min_element;
+// }
+
+// // // Function to find the maximum element in the stack
+// // t_list	*find_max_element(t_list *stack_b)
+// // {
+// // 	t_list	*current = stack_b;
+// // 	t_list	*max_element = NULL;
+// // 	int		max_value = 0;
+
+
+// // 	while (current)
+// // 	{
+// // 		if (current->index >= max_value)
+// // 		{
+// // 			max_value = current->index;
+// // 			max_element = current;
+// // 		}
+// // 		current = current->next;
+// // 	}
+
+// // 	return max_element;
+// // }
+
+// // Function to sort the stacks
+// void	sort(t_list **stack_a, t_list **stack_b)
+// {
+// 	t_list	*min_element;
+// 	// t_list	*max_element;
+// 	t_list	*head_a;
+// 	int		size;
+
+// 	head_a = *stack_a;
+// 	size = ft_listsize(head_a);
+// 	while (*stack_a)
+// 	{
+// 		min_element = find_min_element(*stack_a, size);
+// 		while (*stack_a != min_element)
+// 			ra(stack_a);
+// 		pb(stack_a, stack_b);
+// 	}
+// 	while (*stack_b)
+// 	{
+// 		// max_element = find_max_element(*stack_b);
+// 		// while (*stack_b != max_element)
+// 		// 	rra(stack_b);
+// 		pa(stack_a, stack_b);
+// 	}
+// }
