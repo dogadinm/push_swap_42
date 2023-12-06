@@ -6,7 +6,7 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:06:11 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/12/05 15:36:39 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/12/06 12:03:18 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "libft/libft.h"
-// Stack
+
 typedef struct s_list
 {
 	int				value;
@@ -33,21 +33,22 @@ t_list	*ft_listlast(t_list *head);
 void	ft_listadd_back(t_list **stack, t_list *new);
 int		ft_listsize(t_list *head);
 
-// Util functions
+int		get_min(t_list **stack, int val);
+void	sort_3(t_list **stack_a);
+void	sort_4(t_list **stack_a, t_list **stack_b);
+void	sort_5(t_list **stack_a, t_list **stack_b);
+void	simple_sort(t_list **stack_a, t_list **stack_b);
+
 void	ft_error(char *msg);
 void	ft_check_args(int argc, char **argv);
 int		is_sorted(t_list **stack);
 int		get_distance(t_list **stack, int index);
-void	make_top(t_list **stack, int distance);
 void	free_stack(t_list **stack);
 void	ft_free(char **str);
 
-// Algorithm utils
 void	sort(t_list **stack_a, t_list **stack_b);
-void	simple_sort(t_list **stack_a, t_list **stack_b);
-void	sort_5(t_list **stack_a, t_list **stack_b);
 
-// Instruction functions
+
 int		swap(t_list **stack);
 int		push(t_list **stack_to, t_list **stack_from);
 int		rotate(t_list **stack);

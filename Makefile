@@ -6,7 +6,7 @@
 #    By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/25 12:14:44 by mdogadin          #+#    #+#              #
-#    Updated: 2023/12/05 15:09:49 by mdogadin         ###   ########.fr        #
+#    Updated: 2023/12/06 11:02:56 by mdogadin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS =	arg_check.c \
 		reverse_rotate.c \
 		rotate.c \
 		simple.c \
+		simple_4_5.c \
 		sort.c \
 		stack_index.c \
 		swap.c \
