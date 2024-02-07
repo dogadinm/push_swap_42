@@ -6,7 +6,7 @@
 /*   By: mdogadin <mdogadin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 11:06:11 by mdogadin          #+#    #+#             */
-/*   Updated: 2023/12/06 12:03:18 by mdogadin         ###   ########.fr       */
+/*   Updated: 2023/12/25 14:07:02 by mdogadin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void	free_stack(t_list **stack);
 void	ft_free(char **str);
 
 void	sort(t_list **stack_a, t_list **stack_b);
-
 
 int		swap(t_list **stack);
 int		push(t_list **stack_to, t_list **stack_from);
